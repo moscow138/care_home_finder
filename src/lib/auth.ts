@@ -5,7 +5,6 @@ import GoogleProvider from "next-auth/providers/google";
 import { db } from "./db";
 import { compare } from "bcrypt";
 
-
 export const authOptions: NextAuthOptions = {
   // Configure one or more authentication providers
   adapter:PrismaAdapter(db),
@@ -15,7 +14,6 @@ export const authOptions: NextAuthOptions = {
   },
   pages:{
     signIn: '/sign-in'
-
   },
   providers: [
     GoogleProvider({
@@ -65,6 +63,7 @@ export const authOptions: NextAuthOptions = {
       }
     })
   ],
+  
   callbacks: {
     async jwt({ token, user }) {
         if(user){

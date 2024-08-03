@@ -8,7 +8,9 @@ interface ProviderProps{
 }
 const Provider: FC<ProviderProps> = ({ children}) => {
   return (
-    <SessionProvider>{children}</SessionProvider>
+      <SessionProvider>
+      {children}
+      </SessionProvider>
   )
 }
 

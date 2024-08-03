@@ -1,9 +1,15 @@
-import image from "/assets/carefinder.png";
+import Image from "next/image"
 
 export default function Home() {
   return (
-    <div>
-<h1>Home page</h1>
+    <div className="mt-[-15%]">
+      <Image  src='/carefinder.png'
+      className="carefinder-logo"
+      alt="care-Finder logo" 
+      width='350'
+      height='250'
+
+      />
 
     </div>
   )
