@@ -1,19 +1,38 @@
 import Link from 'next/link';
 import { Button, buttonVariants } from './ui/button';
-import { HandMetal } from 'lucide-react';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
 import UserNav from './UserNav';
+import Image from 'next/image';
 
 const Navbar = async () => {
   const session = await getServerSession(authOptions);
   return (
-    <div className=' bg-zinc-100 py-2 border-b border-s-zinc-200 fixed w-full z-10 top-0'>
-      <div className='container flex items-center justify-between'>
+    <div className='flex items-center justify-between'>
+      <div className='flex gap-5 items-center'>
         <Link href='/'>
-          {/* <HandMetal /> */}
-          Home
-        </Link>        
+          <Image src='/carefinder.png'
+          className='rounded-md'
+          alt='logo'
+          width={100}
+          height={100}
+          />
+        </Link>  
+        <Link href='/'>
+        <h2>Home</h2>
+        </Link>
+        <Link href='/about'>
+        <h2>About</h2>
+        </Link>
+    
+      </div>
+      <div className=' bg-gray-100 p-[6px] rounded-md w-[40%] gap-2 hidden md:flex'>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+       <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+       </svg>
+       <input type='text' className='bg-transparent outline-none w-full' aria-label='search' placeholder='Search here' />
+      </div>
+      <h2>
       {session?.user ? (
        <UserNav />
               ): (
@@ -21,7 +40,7 @@ const Navbar = async () => {
           Sign in
         </Link>
       )}
-      </div>
+      </h2>
     </div>
   );
 };
