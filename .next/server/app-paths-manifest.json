@@ -1,9 +1,9 @@
 {
+  "/_not-found/page": "app/_not-found/page.js",
   "/(dashboard)/admin/page": "app/(dashboard)/admin/page.js",
   "/page": "app/page.js",
-  "/about/page": "app/about/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
   "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js",
-  "/(auth)/sign-up/page": "app/(auth)/sign-up/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/(auth)/sign-in/page": "app/(auth)/sign-in/page.js",
   "/(auth)/add-category/page": "app/(auth)/add-category/page.js"
 }
