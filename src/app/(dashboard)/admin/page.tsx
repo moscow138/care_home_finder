@@ -7,7 +7,9 @@ const page = async() => {
     console.log(session);
     if(session?.user){
       return (
-        <div>Welcome to Admin page! <span className="text-2xl">{session?.user.username || session.user.name}</span></div>
+        <div>Welcome to Admin page! <span className="text-2xl">{session?.user.username || session.user.name}</span>
+        
+        </div>
       )
 
     }else{

@@ -24,6 +24,7 @@ const Navbar = async () => {
         <Link href='/about'>
         <h2>About</h2>
         </Link>
+     {session?.user ? <Link href='/admin'><h2>Admin</h2></Link> : null}
     
       </div>
       <div className=' bg-gray-100 p-[6px] rounded-md w-[40%] gap-2 hidden md:flex'>
@@ -32,6 +33,7 @@ const Navbar = async () => {
        </svg>
        <input type='text' className='bg-transparent outline-none w-full' aria-label='search' placeholder='Search here' />
       </div>
+      
       <h2>
       {session?.user ? (
        <UserNav />

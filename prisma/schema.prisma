@@ -23,7 +23,13 @@ model User {
   createdAt DateTime @default(now())
   updateAt DateTime @updatedAt
 }
-
+model Category {
+  id Int @id @default(autoincrement())
+  categoryname String @unique
+  categoryimage String? @unique
+  createdAt DateTime @default(now())
+  updateAt DateTime @updatedAt
+}
 // model Account {
 //   id                 String  @id @default(cuid())
 //   userId             String  @map("user_id")
