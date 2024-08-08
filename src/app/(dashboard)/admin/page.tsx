@@ -19,12 +19,12 @@ const page = async() => {
 
                 <ul className="list-reset flex flex-col">
                     <li className=" w-full h-full py-3 px-2 border-b border-light-border bg-white">
-                        <a href="index.html"
+                        <Link href="/admin"
                            className="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
                             <i className="fas fa-tachometer-alt float-left mx-2"></i>
                             Dashboard
                             <span><i className="fas fa-angle-right float-right"></i></span>
-                        </a>
+                        </Link>
                     </li>
                     <li className="w-full h-full py-3 px-2 border-b border-light-border">
                         <Link href="/add-category"
@@ -35,12 +35,12 @@ const page = async() => {
                         </Link>
                     </li>
                     <li className="w-full h-full py-3 px-2 border-b border-light-border">
-                        <a href="buttons.html"
+                        <Link href="/add-healthcare-home"
                            className="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
                             <i className="fas fa-hospital float-left mx-2"></i>
                             Add Healthcare Facility
                             <span><i className="fa fa-angle-right float-right"></i></span>
-                        </a>
+                        </Link>
                     </li>
                     <li className="w-full h-full py-3 px-2 border-b border-light-border">
                         <a href="tables.html"
